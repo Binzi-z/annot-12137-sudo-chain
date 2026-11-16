@@ -1,0 +1,1 @@
+堡垒机会话日志里 sudo 起 shell 是常态，靠单条 sudo 告警会把运维正常操作全报出来。请实现检测器：① 从事件序列判断提权是否成立（sudo 起 shell 后紧接着做什么）、并识别上传后执行 webshell；② labels.json 的标注全部命中，良性相似流量零误报；③ 每条告警给出触发序列与判定理由，理由必须引用具体事件而不是规则名；④ 无法判定的列入 needs_review 并说明缺少哪类上下文；⑤ 输出 findings.json，含 rule、first_seen、last_seen、entities、evidence。
